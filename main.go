@@ -11,8 +11,11 @@ func main() {
 	if err != nil {
 		log.Fatal("can not find devices", err)
 	}
+	i := 0
 	for _, d := range devices {
-		fmt.Println("\n Name: ", d.Name)
+		fmt.Println(i)
+		i++
+		fmt.Println("\n Name:-", d.Name)
 		fmt.Println("Description: ", d.Description)
 		fmt.Println("Devices addresses: ", d.Addresses)
 		for _, address := range d.Addresses {
